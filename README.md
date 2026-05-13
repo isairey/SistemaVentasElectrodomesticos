@@ -145,7 +145,7 @@ El proyecto fue desarrollado para practicar:
 # 📂 Estructura del proyecto
 
 ```bash
-SistemaREMI-3.0/
+SistemaVentasElectrodomesticos/
 │
 ├── assets/
 ├── css/
@@ -176,7 +176,7 @@ SistemaREMI-3.0/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/usuario/SistemaREMI-3.0.git
+git clone https://github.com/isairey/SistemaVentasElectrodomesticos.git
 ```
 
 ---
@@ -184,7 +184,7 @@ git clone https://github.com/usuario/SistemaREMI-3.0.git
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd SistemaREMI-3.0
+cd SistemaVentasElectrodomesticos
 ```
 
 ---
@@ -318,7 +318,7 @@ git push origin feature/new-feature
 
 <div align="center">
 
-## SistemaREMI Developers
+## Isai Reyes Developer
 
 Desarrolladores enfocados en sistemas administrativos, ventas y plataformas comerciales.
 
