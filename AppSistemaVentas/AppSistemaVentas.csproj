@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E1EE8AF-C832-45C0-822E-1E61485F956E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppSistemaVentas</RootNamespace>
+    <AssemblyName>AppSistemaVentas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdministrador.Designer.cs">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGerente.Designer.cs">
+      <DependentUpon>FrmGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVendedor.Designer.cs">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdministrador.resx">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGerente.resx">
+      <DependentUpon>FrmGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVendedor.resx">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibClases\LibClases.csproj">
+      <Project>{3be84ad3-d392-4fbf-8710-6098c063c1d4}</Project>
+      <Name>LibClases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibFormularios\LibFormularios.csproj">
+      <Project>{38cdfac0-c33e-4654-a76e-0e5eb865909a}</Project>
+      <Name>LibFormularios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinelogomaker-112718-2148-7054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mobile-Menu-Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinelogomaker-112718-2152-0500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-de-género-neutro-filled-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-de-género-neutro-filled-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-histograma-de-distribución-normal-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagopartes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagopartes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagopartes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-usuario-masculino-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinelogomaker-112718-2148-70541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mobile-Menu-Icon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-de-género-neutro-filled-961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagopartes3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinelogomaker-112718-2152-05001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrador-del-hombre-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PGUsuario.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
